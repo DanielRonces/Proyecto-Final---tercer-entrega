@@ -1,0 +1,78 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "nav" "servicios" "aside" "footer";
+}
+
+#header{
+    grid-area: header;
+}
+
+#nav{
+    grid-area: nav;
+}
+
+#servicios{
+    grid-area: servicios;
+}
+
+#aside{
+    grid-area: aside;
+}
+
+#footer{
+    grid-area: footer;
+}
+
+@media only screen and (min-width:  1024px) {
+    .contenedor{
+        grid-template-columns: 70vw 29vw;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header header"
+        "nav nav"
+        "servicios aside"
+        "footer footer";
+    }
+    #aside{
+        .boton{
+            padding: 0.3rem 2rem;
+        }
+    }  
+}
+
+@media only screen and (min-width:  1440px) {
+    #aside{
+        .boton{
+            padding: 0.3rem 4rem;
+        }
+    }   
+}
+
+.contenedorCita{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "nav" "formulario" "aside" "mapa" "footer";
+}
+
+#formulario{
+    grid-area: formulario;
+}
+
+#mapa{
+    grid-area: mapa;
+}
+
+/*responsive de la seccion citas*/
+@media only screen and (min-width: 1024px){
+    .contenedorCita{
+        grid-template-columns: 70% 30%;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header header"
+        "nav nav"
+        "formulario aside"
+        "mapa mapa"
+        "footer footer";
+    } 
+}

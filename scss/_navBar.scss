@@ -1,0 +1,8 @@
+.botonera{
+    background: map-get($map: $colors, $key:'bgNav');;
+    a{
+        color: map-get($map: $colors, $key:'textColor');
+        font-family: $fontMain;
+        font-size: $textSm;
+    }
+}

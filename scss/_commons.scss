@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+	padding: 0;
+}
+
+$colors:(
+    'bgBody': black,
+    'bgNav': linear-gradient(to right, black, rgb(19, 19, 19)),
+    'bgRadial': radial-gradient(circle, grey, black),
+    'textColor': white,
+);
+
+$w-100: 100%;
+$w-95: 95%;
+$w-80: 80%;
+
+$h-10: 10em;
+$h-20: 20em;
+
+$marginTitle: 0.5em auto;
+
+body{
+    background: map-get($map: $colors, $key:'bgBody');
+}
+
+.titulo{
+    font-family: $fontMain;
+    font-size: $textMd;
+    color: map-get($map: $colors, $key:'textColor');
+    text-align: center;
+    margin: $marginTitle;
+    background: map-get($map: $colors, $key:'bgRadial');
+    width: $w-80;
+}
+
+.boton{
+    background: map-get($map: $colors, $key:'bgRadial');
+    margin: 1rem auto;
+    padding: 0.3rem 4rem;
+    border-radius: 2%;
+}
+
+@mixin boxTitulos($fontSize,$color,$fontFamily,$aling){
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $color;
+    align-items: $aling; 
+}
+
+@mixin boxTextos($fontSize,$color,$fontFamily){
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $color; 
+}
+
+@mixin img($whitImg,$heightImg,$object){
+    width: $whitImg;
+    height: $heightImg;
+    object-fit: $object;
+}
